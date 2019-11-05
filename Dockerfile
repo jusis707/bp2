@@ -1,4 +1,4 @@
-FROM --docker-image="dml.bpweb.bp.com:5000/rhel-minimal:latest"
+--docker-image="dml.bpweb.bp.com:5000/rhel-minimal:latest"
 COPY ./entrypoint.sh /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 CMD [ "100", "5000" ]
