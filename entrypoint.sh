@@ -9,7 +9,7 @@ fi
 while [ $n -ne $c ]
 do
    WAIT=$(shuf -i $1-$2 -n 1)
-   sleep 0.5
+   sleep 2
    I=$(shuf -i 1-4 -n 1)
    D=`date -Iseconds`
    case "$I" in
