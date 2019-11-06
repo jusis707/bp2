@@ -1,5 +1,5 @@
-FROM registry.redhat.io/ubi7/ubi-minimal:latest
-COPY ./entrypoint.sh /app/
-WORKDIR /app
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
-CMD [ "100", "5000" ]
+FROM alpine:3.8
+RUN apk add --no-cache bc
+COPY ./entrypoint.sh /
+ENTRYPOINT ["sh", "/entrypoint.sh"]
+CMD [ "10000", "50000000" ]
