@@ -1,4 +1,4 @@
-FROM dml-eu.bpweb.bp.com:5000/rhel7/rhel-minimal:latest
+FROM registry.redhat.io/ubi7/ubi-minimal:latest
 COPY ./entrypoint.sh /app/
 WORKDIR /app
 ENTRYPOINT ["sh", "/app/entrypoint.sh"]
