@@ -1,4 +1,2 @@
-FROM registry.access.redhat.com/rhel-minimal:latest
-COPY ./entrypoint.sh /
-ENTRYPOINT ["sh", "/entrypoint.sh"]
-CMD [ "100", "5000" ]
+FROM dml-eu.bpweb.bp.com:5000/rhel-minimal:latest
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
