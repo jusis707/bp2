@@ -1,4 +1,6 @@
-FROM ubuntu:14.04
-COPY ./entrypoint.sh /
-ENTRYPOINT ["sh", "/entrypoint.sh"]
-CMD [ "100", "5000" ]
+FROM github.com/GrahamDumpleton/os-sample-python
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD python ./flood.py
