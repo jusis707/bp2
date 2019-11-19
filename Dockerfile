@@ -1,4 +1,4 @@
-FROM python~https://github.com/OpenShiftDemos/os-sample-python.git
+FROM python
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
