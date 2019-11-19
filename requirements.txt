@@ -1,1 +1,4 @@
-
+pytz
+numpy
+faker
+tzlocal
