@@ -1,2 +1,4 @@
-FROM cloudgear/ubuntu:14.04
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+FROM ubuntu:14.04
+COPY ./entrypoint.sh /
+ENTRYPOINT ["sh", "/entrypoint.sh"]
+CMD [ "100", "5000" ]
